@@ -12,14 +12,16 @@ header {
 }
 
 .container {
-    width: 1210px;
+    width: 1100px;
     margin: 0 auto;
+    /*
+    border: 1px solid red;
+    */
 }
 
 .top_logo {
     float: left;
     font-size: 14px;
-    padding: 0 68px;
     letter-spacing: 1px;
 }
 
@@ -27,14 +29,13 @@ header {
     font-weight: 500;
 }
 
-.top_logo span {
+span {
     font-weight: 700;
-    color: aqua;
+    color: rgb(0, 220, 190);
 }
 
 nav {
     float: right;
-    margin-right: 68px;
     position: relative;
 }
 
@@ -45,6 +46,10 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.menu li:last-child {
+    padding-right: 0;
 }
 
 .menu_hidden {
@@ -93,4 +98,105 @@ li>ul {
 li:hover>ul {
     opacity: 1;
     visibility: visible;
+}
+
+.first_section {
+    height: 500px;
+    width: 100vw;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(lightgray));
+    background: linear-gradient(white, lightgray);
+}
+
+.first_section .container {
+    padding: 79px 0;
+    position: relative;
+}
+
+.first_section img {
+    -webkit-transform: scale(1.25) translateX(30px) translateY(25px);
+    transform: scale(1.25) translateX(30px) translateY(25px);
+    ;
+}
+
+article div {
+    height: 500px;
+    width: 500px;
+    float: right;
+    margin-right: 80px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+article p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+article button {
+    width: 280px;
+    height: 50px;
+    background-color: rgb(0, 220, 190);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: white;
+}
+
+.first_section::before {
+    content: '';
+    display: block;
+}
+
+.left_arrow,
+.right_arrow,
+.left_arrow::after,
+.right_arrow::after {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: rgb(0, 220, 190);
+    border-radius: 2px;
+}
+
+.left_arrow {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 230px;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.left_arrow::after {
+    content: '';
+    display: block;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.right_arrow {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    top: 230px;
+    left: 1048px;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+.right_arrow::after {
+    content: '';
+    display: block;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
 }
