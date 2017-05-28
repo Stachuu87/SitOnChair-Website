@@ -556,3 +556,31 @@ form>img {
     font-size: 30px;
     border-radius: 10px;
 }
+
+footer {
+    width: 100%;
+    padding-top: 30px;
+    height: 100px;
+}
+
+.copy {
+    font-size: 18px;
+    color: #ababab;
+    float: left;
+    padding-top: 10px;
+}
+
+.footer_logos {
+    float: right;
+}
+
+.footer_logo {
+    display: inline-block;
+    color: #ababab;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.footer_logos>div.footer_logo {
+    margin-left: 65px;
+}
