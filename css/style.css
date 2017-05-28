@@ -30,7 +30,7 @@ header {
 
 span {
     font-weight: 700;
-    color: rgb(0, 220, 190);
+    color: #27a8ab;
 }
 
 nav {
@@ -145,7 +145,7 @@ article p {
 article button {
     width: 280px;
     height: 50px;
-    background-color: rgb(0, 220, 190);
+    background-color: #27a8ab;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -166,7 +166,7 @@ article button {
     position: absolute;
     width: 50px;
     height: 5px;
-    background-color: rgb(0, 220, 190);
+    background-color: #27a8ab;
     border-radius: 2px;
 }
 
@@ -261,7 +261,7 @@ span.bottom_line {
     display: block;
     width: 40%;
     height: 8px;
-    background-color: rgb(0, 220, 190);
+    background-color: #27a8ab;
     position: absolute;
     top: 20px;
 }
@@ -297,7 +297,7 @@ h2::after {
     position: absolute;
     width: 31%;
     height: 10px;
-    background-color: rgb(0, 220, 190);
+    background-color: #27a8ab;
     top: 25px;
 }
 
@@ -312,16 +312,17 @@ h2::after {
 
 .pricelist_position:last-child {
     margin-right: 0;
+    position: relative;
 }
 
 .inactive {
-    border: 2px solid lightgray;
+    border: 2px solid #bbb;
     background-color: white;
 }
 
 .active {
-    border: 2px solid rgb(0, 220, 190);
-    background-color: rgb(0, 220, 190);
+    border: 2px solid #27a8ab;
+    background-color: #27a8ab;
 }
 
 .inactive::before,
@@ -338,13 +339,13 @@ h2::after {
 }
 
 .inactive::before {
-    border: 2px solid lightgray;
+    border: 2px solid #bbb;
     background: white;
 }
 
 .active::before {
-    border: 2px solid rgb(0, 220, 190);
-    background: rgb(0, 220, 190);
+    border: 2px solid #27a8ab;
+    background: #27a8ab;
 }
 
 .inactive::after,
@@ -361,8 +362,8 @@ h2::after {
 }
 
 .inactive::after {
-    border: 2px solid lightgray;
-    background-color: lightgray;
+    border: 2px solid #bbb;
+    background-color: #bbb;
 }
 
 .active::after {
@@ -376,9 +377,96 @@ h3 {
 }
 
 .inactive>h3 {
-    color: rgb(0, 220, 190);
+    color: #27a8ab;
 }
 
 .active>h3 {
     color: white;
+}
+
+.price_circle {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    top: 80px;
+    border: 2px solid #bbb;
+}
+
+.price {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    margin: 25px 0 10px 0;
+    position: relative;
+}
+
+.price>sup {
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+}
+
+.currency {
+    text-align: center;
+    display: block;
+}
+
+.active>.price_circle {
+    background-color: white;
+    border: 2px solid white
+}
+
+.inactive>.price_circle>span {
+    color: #bbb;
+}
+
+.pricelist_position>ul {
+    position: absolute;
+    top: 240px;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    color: #777;
+    line-height: 45px;
+}
+
+.pricelist_position li {
+    height: 45px;
+}
+
+.inactive>ul>li:nth-child(2n+1) {
+    background-color: #e4e4e4;
+}
+
+.pricelist_position>ul>li:nth-child(2n+2) {
+    background-color: #f1f1f1;
+}
+
+.active>ul>li:nth-child(2n+1) {
+    background-color: white;
+}
+
+.pricelist_position>button {
+    position: absolute;
+    height: 35px;
+    width: 125px;
+    border-radius: 10px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -62px;
+    border: none;
+    font-weight: 600;
+}
+
+.inactive>button {
+    background-color: #27a8ab;
+    color: white;
+}
+
+.active>button {
+    background-color: white;
+    color: #27a8ab;
 }
