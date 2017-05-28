@@ -470,3 +470,89 @@ h3 {
     background-color: white;
     color: #27a8ab;
 }
+
+.contact_form {
+    height: 550px;
+    padding: 35px;
+}
+
+.contact_form form {
+    width: 100%%;
+    height: 100%;
+    position: relative;
+}
+
+.contact_form form>input,
+.contact_form form>textarea {
+    width: 60%;
+    border: 1px solid #a4e1d1;
+    height: 100%;
+    font-size: 40px;
+    margin: 0 40px 20px 0;
+    outline-color: #30a9ac;
+    font-family: 'Raleway', 'Arial', sans-serif;
+    padding: 7px 0 7px 10px;
+}
+
+.contact_form form>textarea {
+    resize: none;
+    height: 190px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #c4c4c4;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #c4c4c4;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #c4c4c4;
+}
+
+label:not(.checkbox) {
+    display: none;
+}
+
+form>img {
+    position: absolute;
+    top: -20px;
+    left: 750px;
+}
+
+.contact_form form>input[type="checkbox"] {
+    position: absolute;
+    top: 220px;
+    left: 720px;
+    height: 50px;
+    width: 50px;
+}
+
+#personal_data {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 50px;
+    top: 225px;
+    left: 800px;
+    font-size: 18px;
+    color: #ababab;
+}
+
+.contact_form form>input[type="submit"] {
+    position: absolute;
+    top: 286px;
+    left: 720px;
+    height: 70px;
+    width: 345px;
+    background-color: #27a8ab;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 10px;
+}
