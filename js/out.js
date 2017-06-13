@@ -63,25 +63,16 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var slider = __webpack_require__(1);
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 function slide() {
     var prev = document.querySelector(".leftArrow");
     var next = document.querySelector(".rightArrow");
-    var fields = document.querySelectorAll('.slider');
-    var visibleField = document.querySelector(".slider.visible")
     prev.addEventListener("click", function () {
         var fields = document.querySelectorAll('.slider');
         var visibleField = document.querySelector(".slider.visible")
@@ -116,6 +107,64 @@ function slide() {
 slide();
 
 module.exports = slide;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var slider = __webpack_require__(0);
+var gallery = __webpack_require__(2);
+var hiddenMenu = __webpack_require__(3);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+function galleryHover() {
+    var descriptions = document.querySelectorAll("#sec_section .description");
+    for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].parentElement.addEventListener("mouseover", function () {
+            this.firstElementChild.classList.add("hidden");
+        });
+        descriptions[i].parentElement.addEventListener("mouseleave", function () {
+            this.firstElementChild.classList.remove("hidden");
+        });
+    };
+};
+galleryHover();
+
+module.exports = galleryHover;
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+function hiddenMenu() {
+    var inside;
+    var hiddenList = document.querySelector(".menu_hidden");
+    hiddenList.parentElement.addEventListener("mouseover", function () {
+        hiddenList.classList.remove("hidden");
+        hiddenList.classList.add("visible");
+    });
+    hiddenList.parentElement.addEventListener("mouseleave", function () {
+        hiddenList.classList.add("hidden");
+        hiddenList.classList.remove("visible");
+    });
+    hiddenList.addEventListener("mouseover", function () {
+
+        hiddenList.classList.remove("hidden");
+        hiddenList.classList.add("visible");
+    });
+    hiddenList.addEventListener("mouseleave", function () {
+        hiddenList.classList.add("hidden");
+        hiddenList.classList.remove("visible");
+    });
+
+};
+hiddenMenu();
 
 
 /***/ })

@@ -1,8 +1,6 @@
 function slide() {
     var prev = document.querySelector(".leftArrow");
     var next = document.querySelector(".rightArrow");
-    var fields = document.querySelectorAll('.slider');
-    var visibleField = document.querySelector(".slider.visible")
     prev.addEventListener("click", function () {
         var fields = document.querySelectorAll('.slider');
         var visibleField = document.querySelector(".slider.visible")
