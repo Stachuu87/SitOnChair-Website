@@ -1,21 +1,11 @@
 function hiddenMenu() {
     var inside;
-    var hiddenList = document.querySelector(".menu_hidden");
-    hiddenList.parentElement.addEventListener("mouseover", function () {
-        hiddenList.classList.remove("hidden");
-        hiddenList.classList.add("visible");
+    var hiddenList = document.querySelector(".menu_hidden"); // find the hidden lsit
+    hiddenList.parentElement.addEventListener("mouseover", function () { // when mouse gets over parent Element
+        hiddenList.classList.remove("hidden"); // than show the hidden part
     });
-    hiddenList.parentElement.addEventListener("mouseleave", function () {
-        hiddenList.classList.add("hidden");
-        hiddenList.classList.remove("visible");
-    });
-    hiddenList.addEventListener("mouseover", function () {
-
-        hiddenList.classList.remove("hidden");
-        hiddenList.classList.add("visible");
-    });
-    hiddenList.addEventListener("mouseleave", function () {
-        hiddenList.classList.add("hidden");
+    hiddenList.parentElement.addEventListener("mouseleave", function () { // whgen mouse leaves
+        hiddenList.classList.add("hidden"); // than hide it
         hiddenList.classList.remove("visible");
     });
 
